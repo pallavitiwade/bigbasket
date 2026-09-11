@@ -1,0 +1,621 @@
+<!-- ================= TOP OFFER BAR ================= -->
+<div class="top-bar">
+  <div class="top-item">
+    <mat-icon>local_shipping</mat-icon>
+
+    <div>
+      <strong>FREE SHIPPING</strong>
+      <span>On orders over $49</span>
+    </div>
+  </div>
+
+  <div class="summer-offer">
+    <mat-icon>wb_sunny</mat-icon>
+    <span>SUMMER FRESH SALE – UP TO 35% OFF</span>
+  </div>
+
+  <a href="javascript:void(0)">View in Browser</a>
+</div>
+
+
+<!-- ================= NAVBAR ================= -->
+<header class="navbar">
+
+  <!-- Logo -->
+  <div class="logo" routerLink="/">
+    <div class="logo-icon">
+      <span>🍏</span>
+    </div>
+
+    <div>
+      <h2>FruitBasket</h2>
+      <p>NATURALLY FRESH</p>
+    </div>
+  </div>
+
+
+  <!-- Navigation -->
+  <nav class="nav-links">
+
+    <a routerLink="/products">FRESH FRUITS</a>
+
+    <a routerLink="/products"
+       [queryParams]="{category: 'fruit-box'}">
+      FRUIT BOX
+    </a>
+
+    <a routerLink="/products"
+       [queryParams]="{category: 'combos'}">
+      COMBOS
+    </a>
+
+    <a routerLink="/products"
+       [queryParams]="{category: 'juices'}">
+      JUICES
+    </a>
+
+    <a
+      routerLink="/offers"
+      class="offer-link">
+      OFFERS
+    </a>
+
+  </nav>
+
+
+  <!-- Navbar actions -->
+  <div class="nav-actions">
+
+    <!-- Search -->
+    <button
+      mat-icon-button
+      matTooltip="Search"
+      routerLink="/products">
+
+      <mat-icon>search</mat-icon>
+
+    </button>
+
+
+    <!-- Account -->
+    <button
+      mat-icon-button
+      matTooltip="Account"
+      routerLink="/login">
+
+      <mat-icon>person_outline</mat-icon>
+
+    </button>
+
+
+    <!-- Cart -->
+    <button
+      mat-icon-button
+      matTooltip="Shopping Cart"
+      routerLink="/cart"
+      class="cart-button">
+
+      <mat-icon
+        [matBadge]="cartCount"
+        matBadgeColor="warn"
+        [matBadgeHidden]="cartCount === 0">
+        shopping_bag
+      </mat-icon>
+
+    </button>
+
+
+    <!-- Mobile menu -->
+    <button
+      mat-icon-button
+      class="mobile-menu-button"
+      (click)="mobileMenuOpen = !mobileMenuOpen">
+
+      <mat-icon>
+        {{ mobileMenuOpen ? 'close' : 'menu' }}
+      </mat-icon>
+
+    </button>
+
+  </div>
+
+</header>
+
+
+<!-- ================= MOBILE MENU ================= -->
+
+<div
+  class="mobile-menu"
+  [class.show]="mobileMenuOpen">
+
+  <a routerLink="/products" (click)="mobileMenuOpen = false">
+    FRESH FRUITS
+  </a>
+
+  <a routerLink="/products"
+     [queryParams]="{category: 'fruit-box'}"
+     (click)="mobileMenuOpen = false">
+    FRUIT BOX
+  </a>
+
+  <a routerLink="/products"
+     [queryParams]="{category: 'combos'}"
+     (click)="mobileMenuOpen = false">
+    COMBOS
+  </a>
+
+  <a routerLink="/products"
+     [queryParams]="{category: 'juices'}"
+     (click)="mobileMenuOpen = false">
+    JUICES
+  </a>
+
+  <a routerLink="/offers"
+     (click)="mobileMenuOpen = false">
+    OFFERS
+  </a>
+
+</div>
+
+
+<!-- ================= HERO SECTION ================= -->
+
+<section class="hero">
+
+  <div class="hero-content">
+
+    <span class="small-title">
+      100% NATURAL & FARM FRESH
+    </span>
+
+    <h1>
+      Fresh Fruits<br>
+      Better Life
+    </h1>
+
+    <p>
+      Handpicked from the best farms to<br>
+      bring freshness, nutrition & happiness<br>
+      to your family.
+    </p>
+
+    <button
+      mat-raised-button
+      color="primary"
+      class="shop-button"
+      routerLink="/products">
+
+      SHOP NOW
+
+      <mat-icon>arrow_forward</mat-icon>
+
+    </button>
+
+
+    <!-- Hero benefits -->
+
+    <div class="hero-benefits">
+
+      <div>
+        <mat-icon>verified</mat-icon>
+        <span>100%<br>NATURAL</span>
+      </div>
+
+      <div>
+        <mat-icon>eco</mat-icon>
+        <span>NO CHEMICAL<br>NO PRESERVATIVES</span>
+      </div>
+
+      <div>
+        <mat-icon>agriculture</mat-icon>
+        <span>FARM<br>FRESH</span>
+      </div>
+
+      <div>
+        <mat-icon>favorite</mat-icon>
+        <span>RICH IN<br>NUTRIENTS</span>
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- Hero image -->
+
+  <div class="hero-image">
+
+    <div class="discount-circle">
+      <strong>UP TO</strong>
+      <span>35%</span>
+      <strong>OFF</strong>
+    </div>
+
+    <img
+      src="https://media.istockphoto.com/id/2272566795/photo/many-fresh-ripe-fruits-in-basket-isolated-on-white.jpg?s=612x612&w=0&k=20&c=q0PdA8q2nXzHmUPJ4OWkapcImqpGWteWHtbFOSal0Ow="
+      alt="Fresh fruits">
+
+  </div>
+
+</section>
+
+
+<!-- ================= SERVICE BAR ================= -->
+
+<section class="service-bar">
+
+  <div class="service-item">
+
+    <mat-icon>local_shipping</mat-icon>
+
+    <div>
+      <strong>FREE DELIVERY</strong>
+      <span>On orders over $49</span>
+    </div>
+
+  </div>
+
+
+  <div class="service-item">
+
+    <mat-icon>security</mat-icon>
+
+    <div>
+      <strong>SAFE & SECURE</strong>
+      <span>100% secure payment</span>
+    </div>
+
+  </div>
+
+
+  <div class="service-item">
+
+    <mat-icon>inventory_2</mat-icon>
+
+    <div>
+      <strong>EASY RETURNS</strong>
+      <span>Hassle-free returns</span>
+    </div>
+
+  </div>
+
+
+  <div class="service-item">
+
+    <mat-icon>headset_mic</mat-icon>
+
+    <div>
+      <strong>SUPPORT 24/7</strong>
+      <span>We're here to help</span>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= BEST PRODUCTS ================= -->
+
+<section class="best-products">
+
+  <div class="section-heading">
+
+    <span>🍃</span>
+
+    <h2>OUR BEST PICKS FOR YOU</h2>
+
+    <span>🍃</span>
+
+  </div>
+
+  <div class="heading-line"></div>
+
+
+  <div class="product-grid">
+
+    <mat-card
+      class="product-card"
+      *ngFor="let product of bestProducts">
+
+      <div class="product-image">
+
+        <span
+          class="product-badge"
+          *ngIf="product.badge">
+
+          {{ product.badge }}
+
+        </span>
+
+        <img
+          [src]="product.image"
+          [alt]="product.name">
+
+      </div>
+
+
+      <mat-card-content>
+
+        <h3>{{ product.name }}</h3>
+
+        <div class="price">
+
+          <span>
+            ${{ product.price }}
+          </span>
+
+          <small>
+            /kg
+          </small>
+
+        </div>
+
+      </mat-card-content>
+
+
+      <mat-card-actions>
+
+        <button
+          mat-stroked-button
+          color="primary"
+          (click)="addToCart()">
+
+          SHOP NOW
+
+        </button>
+
+      </mat-card-actions>
+
+    </mat-card>
+
+  </div>
+
+</section>
+
+
+<!-- ================= FRUIT BOX BANNER ================= -->
+
+<section class="fruit-box-section">
+
+  <div class="fruit-box-content">
+
+    <span class="box-label">
+      HEALTHY COMBOS
+    </span>
+
+    <h2>
+      Fruit Box<br>
+      For Your Family
+    </h2>
+
+    <p>
+      A perfect mix of handpicked fruits<br>
+      delivered fresh to your doorstep.
+    </p>
+
+    <button
+      mat-raised-button
+      color="primary"
+      routerLink="/products"
+      [queryParams]="{category: 'fruit-box'}">
+
+      ORDER NOW
+
+      <mat-icon>arrow_forward</mat-icon>
+
+    </button>
+
+  </div>
+
+
+  <div class="fruit-box-image">
+
+    <div class="price-circle">
+
+      <small>STARTING FROM</small>
+
+      <strong>$29.99</strong>
+
+    </div>
+
+    <img
+      src="https://media.istockphoto.com/id/1427235345/photo/wicker-basket-with-different-fresh-fruits-on-white-wooden-table.jpg?s=612x612&w=0&k=20&c=ee8qWPOoVl-ga_Nulq6pfK0gAZEEbVeHK1Fu5zOpddA="
+      alt="Fruit box">
+
+  </div>
+
+</section>
+
+
+<!-- ================= BENEFITS ================= -->
+
+<section class="benefits">
+
+  <div class="benefit">
+
+    <mat-icon>eco</mat-icon>
+
+    <div>
+      <strong>HANDPICKED</strong>
+      <span>Best quality fruits</span>
+    </div>
+
+  </div>
+
+
+  <div class="benefit">
+
+    <mat-icon>spa</mat-icon>
+
+    <div>
+      <strong>SEASONAL & FRESH</strong>
+      <span>Picked at the right time</span>
+    </div>
+
+  </div>
+
+
+  <div class="benefit">
+
+    <mat-icon>inventory</mat-icon>
+
+    <div>
+      <strong>HYGIENIC PACKAGING</strong>
+      <span>Packed with care</span>
+    </div>
+
+  </div>
+
+
+  <div class="benefit">
+
+    <mat-icon>favorite</mat-icon>
+
+    <div>
+      <strong>BOOSTS IMMUNITY</strong>
+      <span>Stay healthy naturally</span>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= COUPON ================= -->
+
+<section class="coupon">
+
+  <div class="coupon-icon">
+
+    <mat-icon>local_offer</mat-icon>
+
+  </div>
+
+
+  <div class="coupon-content">
+
+    <h2>
+      GET 10% OFF ON YOUR FIRST ORDER!
+    </h2>
+
+    <p>
+      Use code:
+      <strong>FRESH10</strong>
+    </p>
+
+  </div>
+
+
+  <button
+    mat-stroked-button
+    routerLink="/products">
+
+    SHOP NOW
+
+  </button>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer">
+
+  <div class="footer-column">
+
+    <h3>SHOP</h3>
+
+    <a routerLink="/products">Fresh Fruits</a>
+    <a routerLink="/products">Fruit Boxes</a>
+    <a routerLink="/products">Combos</a>
+    <a routerLink="/products">Juices</a>
+    <a routerLink="/offers">Offers</a>
+
+  </div>
+
+
+  <div class="footer-column">
+
+    <h3>CUSTOMER CARE</h3>
+
+    <a href="#">Track Your Order</a>
+    <a href="#">Returns & Refunds</a>
+    <a href="#">Shipping Policy</a>
+    <a href="#">Payment Methods</a>
+    <a href="#">FAQs</a>
+
+  </div>
+
+
+  <div class="footer-column">
+
+    <h3>ABOUT US</h3>
+
+    <a href="#">Our Story</a>
+    <a href="#">Why Choose Us</a>
+    <a href="#">Blog</a>
+    <a href="#">Sustainability</a>
+    <a href="#">Contact Us</a>
+
+  </div>
+
+
+  <div class="footer-column social-column">
+
+    <h3>STAY CONNECTED</h3>
+
+    <div class="social-icons">
+
+      <button mat-mini-fab>
+        <mat-icon>facebook</mat-icon>
+      </button>
+
+      <button mat-mini-fab>
+        <mat-icon>camera_alt</mat-icon>
+      </button>
+
+      <button mat-mini-fab>
+        <mat-icon>play_arrow</mat-icon>
+      </button>
+
+    </div>
+
+
+    <p>
+      Subscribe to get updates on<br>
+      fresh offers and new arrivals.
+    </p>
+
+
+    <div class="subscribe">
+
+      <input
+        type="email"
+        placeholder="Enter your email">
+
+      <button mat-icon-button>
+        <mat-icon>arrow_forward</mat-icon>
+      </button>
+
+    </div>
+
+  </div>
+
+</footer>
+
+
+<div class="copyright">
+
+  <p>
+    © 2024 Fruitora. All rights reserved.
+  </p>
+
+  <p>
+    You are receiving this email because you subscribed to our newsletter.
+  </p>
+
+  <a href="#">Unsubscribe</a>
+
+</div>
+
+<router-outlet></router-outlet>

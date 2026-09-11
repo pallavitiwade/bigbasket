@@ -1,0 +1,1212 @@
+
+$green: #3d7d20;
+$dark-green: #17451d;
+$light-green: #eef6e8;
+$cream: #f8f8f0;
+$text: #202820;
+$border: #dfe5d9;
+
+
+:host {
+  display: block;
+  font-family: Arial, Helvetica, sans-serif;
+  color: $text;
+}
+
+
+/* =====================================================
+   TOP BAR
+===================================================== */
+
+.top-bar {
+  height: 48px;
+  background: #f7f7ef;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 7%;
+
+  font-size: 11px;
+
+  .top-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    mat-icon {
+      font-size: 20px;
+      width: 20px;
+      height: 20px;
+    }
+
+    div {
+      display: flex;
+      flex-direction: column;
+    }
+
+    strong {
+      font-size: 10px;
+    }
+
+    span {
+      font-size: 9px;
+      color: #777;
+    }
+  }
+
+  .summer-offer {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    color: $dark-green;
+    font-weight: 600;
+
+    mat-icon {
+      font-size: 18px;
+    }
+  }
+
+  a {
+    color: #333;
+    text-decoration: underline;
+  }
+}
+
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+.navbar {
+  min-height: 72px;
+
+  padding: 0 7%;
+
+  background: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-bottom: 1px solid #eee;
+
+  position: relative;
+  z-index: 20;
+}
+
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  cursor: pointer;
+
+  .logo-icon {
+    font-size: 32px;
+  }
+
+  h2 {
+    margin: 0;
+
+    color: $green;
+    font-size: 20px;
+    font-weight: 800;
+  }
+
+  p {
+    margin: 0;
+
+    color: #777;
+    font-size: 8px;
+    letter-spacing: 1px;
+  }
+}
+
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+
+  a {
+    color: #222;
+
+    text-decoration: none;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    transition: 0.2s;
+
+    &:hover {
+      color: $green;
+    }
+  }
+
+  .offer-link {
+    color: #d94d42;
+  }
+}
+
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+
+  button {
+    color: #333;
+  }
+}
+
+
+.mobile-menu-button {
+  display: none;
+}
+
+
+/* =====================================================
+   MOBILE MENU
+===================================================== */
+
+.mobile-menu {
+  display: none;
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero {
+  min-height: 440px;
+
+  background: $light-green;
+
+  padding: 35px 7%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  overflow: hidden;
+}
+
+
+.hero-content {
+  width: 48%;
+}
+
+
+.small-title {
+  color: $green;
+
+  font-size: 13px;
+  font-weight: 700;
+}
+
+
+.hero h1 {
+  margin: 10px 0 15px;
+
+  color: #143d18;
+
+  font-family: Georgia, serif;
+
+  font-size: 52px;
+  line-height: 1;
+
+  font-weight: 700;
+}
+
+
+.hero p {
+  color: #4a4a4a;
+
+  font-size: 14px;
+
+  line-height: 1.7;
+
+  margin-bottom: 20px;
+}
+
+
+.shop-button {
+  background: $green !important;
+
+  color: white !important;
+
+  border-radius: 7px;
+
+  padding: 5px 15px;
+
+  mat-icon {
+    margin-left: 10px;
+  }
+}
+
+
+.hero-benefits {
+  display: flex;
+
+  gap: 25px;
+
+  margin-top: 30px;
+}
+
+
+.hero-benefits div {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+
+  text-align: center;
+
+  gap: 15px;
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  color: #486342;
+}
+
+
+.hero-benefits mat-icon {
+  color: $green;
+
+  font-size: 24px;
+
+  width: 24px;
+  height: 24px;
+}
+
+
+.hero-image {
+  width: 50%;
+
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.hero-image img {
+  width: 100%;
+
+  max-width: 600px;
+
+  object-fit: contain;
+}
+
+
+.discount-circle {
+  position: absolute;
+
+  right: 3%;
+  top: 5%;
+
+  z-index: 2;
+
+  width: 80px;
+  height: 80px;
+
+  border-radius: 50%;
+
+  background: $green;
+
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+
+  strong {
+    font-size: 10px;
+  }
+
+  span {
+    font-size: 22px;
+    font-weight: 800;
+  }
+}
+
+
+/* =====================================================
+   SERVICE BAR
+===================================================== */
+
+.service-bar {
+  background: $green;
+
+  color: white;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  padding: 15px 7%;
+}
+
+
+.service-item {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  gap: 12px;
+
+  border-right: 1px solid rgba(255,255,255,.4);
+
+  &:last-child {
+    border-right: none;
+  }
+
+  mat-icon {
+    font-size: 28px;
+
+    width: 28px;
+    height: 28px;
+  }
+
+  div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  strong {
+    font-size: 10px;
+  }
+
+  span {
+    font-size: 9px;
+
+    margin-top: 3px;
+
+    opacity: .85;
+  }
+}
+
+
+/* =====================================================
+   BEST PRODUCTS
+===================================================== */
+
+.best-products {
+  padding: 35px 6%;
+  background: white;
+}
+
+
+.section-heading {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  gap: 10px;
+
+  h2 {
+    margin: 0;
+
+    font-family: Georgia, serif;
+
+    font-size: 22px;
+
+    color: #222;
+  }
+
+  span {
+    color: $green;
+  }
+}
+
+
+.heading-line {
+  width: 55px;
+  height: 2px;
+
+  background: $green;
+
+  margin: 10px auto 20px;
+}
+
+
+.product-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(5, 1fr);
+
+  gap: 15px;
+}
+
+
+.product-card {
+  border-radius: 8px;
+
+  border: 1px solid #eee;
+
+  box-shadow: none !important;
+
+  transition: .3s;
+
+  overflow: hidden;
+
+  &:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+      0 10px 25px rgba(0,0,0,.08) !important;
+  }
+}
+
+
+.product-image {
+  height: 150px;
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #fafaf7;
+
+  img {
+    width: 100%;
+    height: 100%;
+
+    object-fit:cover;
+  }
+}
+
+
+.product-badge {
+  position: absolute;
+
+  top: 8px;
+  left: 8px;
+
+  background: $green;
+
+  color: white;
+
+  padding: 4px 7px;
+
+  border-radius: 4px;
+
+  font-size: 8px;
+
+  z-index: 2;
+}
+
+
+.product-card mat-card-content {
+  padding: 10px 12px 0;
+}
+
+
+.product-card h3 {
+  font-size: 12px;
+
+  margin: 0 0 7px;
+
+  font-weight: 700;
+}
+
+
+.price {
+  color: $green;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  small {
+    font-size: 9px;
+
+    color: #777;
+  }
+}
+
+
+.product-card mat-card-actions {
+  padding: 5px 12px 12px;
+}
+
+
+.product-card button {
+  width: 100%;
+
+  font-size: 9px;
+
+  height: 32px;
+
+  border-color: $green;
+background: $green;
+  color: $cream;
+}
+
+
+/* =====================================================
+   FRUIT BOX
+===================================================== */
+
+.fruit-box-section {
+  margin: 10px 6% 0;
+
+  min-height: 220px;
+
+  background: #f3f5e9;
+
+  border-radius: 10px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  overflow: hidden;
+}
+
+
+.fruit-box-content {
+  padding: 30px;
+
+  width: 45%;
+
+  .box-label {
+    color: $green;
+
+    font-size: 10px;
+
+    font-weight: 700;
+  }
+
+  h2 {
+    margin: 8px 0;
+
+    font-family: Georgia, serif;
+
+    font-size: 30px;
+
+    line-height: 1.1;
+  }
+
+  p {
+    font-size: 11px;
+
+    line-height: 1.6;
+
+    color: #555;
+  }
+
+  button {
+    background: $green;
+
+    color: white;
+  }
+}
+
+
+.fruit-box-image {
+  width: 55%;
+
+  height: 100%;
+
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+}
+
+
+.fruit-box-image img {
+  width: 90%;
+
+  object-fit: contain;
+}
+
+
+.price-circle {
+  position: absolute;
+
+  left:14%;
+  top: 50%;
+
+  width: 70px;
+  height: 70px;
+
+  border-radius: 50%;
+
+  background: #f4bd38;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  z-index: 3;
+
+  small {
+    font-size: 6px;
+  }
+
+  strong {
+    font-size: 13px;
+  }
+}
+
+
+/* =====================================================
+   BENEFITS
+===================================================== */
+
+.benefits {
+  margin: 0 6%;
+
+  padding: 18px 20px;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 20px;
+}
+
+
+.benefit {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  mat-icon {
+    color: $green;
+
+    font-size: 28px;
+  }
+
+  div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  strong {
+    font-size: 9px;
+  }
+
+  span {
+    color: #777;
+
+    font-size: 8px;
+
+    margin-top: 4px;
+  }
+}
+
+
+/* =====================================================
+   COUPON
+===================================================== */
+
+.coupon {
+  margin: 10px 6% 25px;
+
+  min-height: 70px;
+
+  padding: 0 25px;
+
+  background: $green;
+
+  color: white;
+
+  border-radius: 9px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 20px;
+}
+
+
+.coupon-icon {
+  width: 45px;
+  height: 45px;
+
+  border: 1px solid rgba(255,255,255,.7);
+
+  border-radius: 50%;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
+
+.coupon-content {
+  flex: 1;
+
+  h2 {
+    font-size: 17px;
+
+    margin: 0 0 5px;
+  }
+
+  p {
+    font-size: 10px;
+
+    margin: 0;
+
+    opacity: .9;
+  }
+}
+
+
+.coupon button {
+  background: white;
+
+  color: $green;
+
+  border: none;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.footer {
+  background: #f7f7ef;
+
+  padding: 35px 7%;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 30px;
+}
+
+
+.footer-column {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 8px;
+
+  h3 {
+    font-size: 11px;
+
+    margin: 0 0 7px;
+
+    font-weight: 800;
+  }
+
+  a {
+    color: #555;
+
+    text-decoration: none;
+
+    font-size: 10px;
+
+    &:hover {
+      color: $green;
+    }
+  }
+
+  p {
+    color: #666;
+
+    font-size: 9px;
+
+    line-height: 1.5;
+  }
+}
+
+
+.social-icons {
+  display: flex;
+
+  gap: 7px;
+
+  button {
+    width: 30px;
+    height: 30px;
+
+    line-height: 30px;
+
+    box-shadow: none;
+
+    background: #222;
+
+    color: white;
+
+    mat-icon {
+      font-size: 15px;
+    }
+  }
+}
+
+
+.subscribe {
+  height: 35px;
+
+  background: white;
+
+  border: 1px solid #ddd;
+
+  display: flex;
+
+  align-items: center;
+
+  padding-left: 10px;
+
+  input {
+    border: none;
+
+    outline: none;
+
+    flex: 1;
+
+    font-size: 9px;
+
+    min-width: 0;
+  }
+
+  button {
+    width: 35px;
+    height: 35px;
+
+    background: $green;
+
+    color: white;
+
+    border-radius: 0;
+  }
+}
+
+
+/* =====================================================
+   COPYRIGHT
+===================================================== */
+
+.copyright {
+  background: #f7f7ef;
+
+  border-top: 1px solid #ddd;
+
+  text-align: center;
+
+  padding: 15px;
+
+  color: #777;
+
+  font-size: 8px;
+
+  p {
+    margin: 3px;
+  }
+
+  a {
+    color: #555;
+  }
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1000px) {
+
+  .nav-links {
+    gap: 15px;
+
+    a {
+      font-size: 9px;
+    }
+  }
+
+
+  .hero h1 {
+    font-size: 42px;
+  }
+
+
+  .product-grid {
+    grid-template-columns:
+      repeat(3, 1fr);
+  }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 768px) {
+
+  .top-bar {
+
+    padding: 0 20px;
+
+    .summer-offer {
+      display: none;
+    }
+
+    > a {
+      display: none;
+    }
+  }
+
+
+  .navbar {
+    padding: 0 20px;
+  }
+
+
+  .nav-links {
+    display: none;
+  }
+
+
+  .mobile-menu-button {
+    display: inline-flex;
+  }
+
+
+  .mobile-menu {
+    display: flex;
+
+    flex-direction: column;
+
+    background: white;
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+
+    top: 120px;
+
+    z-index: 100;
+
+    max-height: 0;
+
+    overflow: hidden;
+
+    transition: .3s;
+
+    box-shadow:
+      0 5px 15px rgba(0,0,0,.1);
+
+    &.show {
+      max-height: 400px;
+    }
+
+    a {
+      padding: 15px 25px;
+
+      border-bottom: 1px solid #eee;
+
+      color: #222;
+
+      text-decoration: none;
+
+      font-size: 12px;
+
+      font-weight: 600;
+    }
+  }
+
+
+  .hero {
+    padding: 35px 20px;
+
+    flex-direction: column;
+
+    text-align: center;
+  }
+
+
+  .hero-content {
+    width: 100%;
+  }
+
+
+  .hero h1 {
+    font-size: 40px;
+  }
+
+
+  .hero p br {
+    display: none;
+  }
+
+
+  .hero-benefits {
+    justify-content: center;
+
+    gap: 12px;
+  }
+
+
+  .hero-image {
+    width: 100%;
+
+    margin-top: 20px;
+  }
+
+
+  .discount-circle {
+    right: 5%;
+  }
+
+
+  .service-bar {
+    grid-template-columns:
+      repeat(2, 1fr);
+
+    gap: 15px;
+
+    padding: 20px;
+  }
+
+
+  .service-item {
+    border-right: none;
+
+    justify-content: flex-start;
+  }
+
+
+  .product-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+
+  .fruit-box-section {
+    flex-direction: column;
+
+    margin: 10px 20px 0;
+  }
+
+
+  .fruit-box-content {
+    width: 100%;
+
+    text-align: center;
+  }
+
+
+  .fruit-box-image {
+    width: 100%;
+  }
+
+
+  .benefits {
+    margin: 0 20px;
+
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+
+  .coupon {
+    margin: 10px 20px;
+
+    padding: 15px;
+
+    flex-wrap: wrap;
+  }
+
+
+  .coupon-content h2 {
+    font-size: 14px;
+  }
+
+
+  .footer {
+    padding: 30px 20px;
+
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 480px) {
+
+  .logo h2 {
+    font-size: 17px;
+  }
+
+
+  .logo p {
+    font-size: 7px;
+  }
+
+
+  .hero h1 {
+    font-size: 34px;
+  }
+
+
+  .hero-benefits {
+    display: grid;
+
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  .section-heading h2 {
+    font-size: 17px;
+  }
+
+
+  .benefits {
+    grid-template-columns: 1fr;
+  }
+
+
+  .footer {
+    grid-template-columns: 1fr;
+  }
+
+}
