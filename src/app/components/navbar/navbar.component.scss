@@ -1,0 +1,171 @@
+$green: #3d7d20;
+$dark-green: #17451d;
+$light-green: #eef6e8;
+$cream: #f8f8f0;
+$text: #202820;
+$border: #dfe5d9;
+
+
+:host {
+  display: block;
+  font-family: Arial, Helvetica, sans-serif;
+  color: $text;
+}
+
+.top-bar {
+  height: 48px;
+  background: #f7f7ef;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 7%;
+
+  font-size: 12px;
+
+  .top-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    mat-icon {
+      font-size: 20px;
+      width: 20px;
+      height: 20px;
+    }
+
+    div {
+      display: flex;
+      flex-direction: column;
+    }
+
+    strong {
+      font-size: 10px;
+    }
+
+    span {
+      font-size: 9px;
+      color: #777;
+    }
+  }
+
+  .summer-offer {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    color: $dark-green;
+    font-weight: 600;
+
+    mat-icon {
+      font-size: 18px;
+    }
+  }
+
+  a {
+    color: #333;
+    text-decoration: underline;
+  }
+}
+
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+.navbar {
+  min-height: 72px;
+
+  padding: 0 7%;
+
+  background: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-bottom: 1px solid #eee;
+
+  position: relative;
+  z-index: 20;
+}
+
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  cursor: pointer;
+
+  .logo-icon {
+    font-size: 32px;
+  }
+
+  h2 {
+    margin: 0;
+
+    color: $green;
+    font-size: 20px;
+    font-weight: 800;
+  }
+
+  p {
+    margin: 0;
+
+    color: #777;
+    font-size: 8px;
+    letter-spacing: 1px;
+  }
+}
+
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+
+  a {
+    color: #222;
+
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    transition: 0.2s;
+
+    &:hover {
+      color: $green;
+    }
+  }
+
+  .offer-link {
+    color: #d94d42;
+  }
+}
+
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+
+  button {
+    color: #333;
+  }
+}
+
+
+.mobile-menu-button {
+  display: none;
+}
+
+
+/* =====================================================
+   MOBILE MENU
+===================================================== */
+
+.mobile-menu {
+  display: none;
+}

@@ -1,0 +1,92 @@
+
+
+
+<div class="fruit-page">
+
+  <!-- Page Header -->
+
+  <div class="page-header">
+    <h2>Fresh Fruits</h2>
+    <p>Choose your favorite fruits</p>
+  </div>
+
+  <!-- Fruit Cards -->
+  <div class="container">
+
+    <input (input)="searchCard($event)" type="text" placeholder="Search Fruit" class="form-control" [(ngModel)]="searchValue" >
+    <div class="row mt-4">
+
+      <div
+        class="col-lg-3 col-md-4 col-sm-6 mb-4"
+        *ngFor="let fruit of filter"
+        
+      >
+        <div class="fruit-card">
+
+          <!-- Image -->
+          <div class="fruit-image">
+            <img
+              [src]="fruit.image"
+              [alt]="fruit.name"
+            />
+          </div>
+
+          <!-- Content -->
+          <div class="fruit-content">
+
+            <div class="fruit-top">
+              <h3>{{ fruit.name }}</h3>
+
+              <span class="category">
+                {{ fruit.category }}
+              </span>
+            </div>
+
+            <p class="description">
+              {{ fruit.description }}
+            </p>
+
+            <div class="fruit-info">
+              <div>
+                <span class="label">Color</span>
+                <span>{{ fruit.color }}</span>
+              </div>
+
+              <div>
+                <span class="label">Origin</span>
+                <span>{{ fruit.origin }}</span>
+              </div>
+            </div>
+
+            <div class="fruit-bottom">
+
+              <div class="price">
+                ₹{{ fruit.price }}
+              </div>
+
+              <div class="quantity">
+                {{ fruit.quantity }}
+              </div>
+
+            </div>
+
+            <button
+               mat-raised-button
+      color="light" class="shop-button btn-block" routerLink="/cart" (click)="AddToCart(fruit)"
+            >
+              Add to Cart
+            </button>
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<div class="text-left" *ngIf="filter.length===0">
+  <h4>No Fruits Found</h4>
+</div>

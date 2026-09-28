@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Ifruit } from 'src/app/Models/fruits';
+import { cartService } from 'src/app/services/cart';
 import { SearchService } from 'src/app/services/search';
 
 @Component({
@@ -45,6 +46,7 @@ mobileMenuOpen:boolean=false
 
 
   constructor(
+        private _cart:cartService
     
   ){}
 
@@ -57,16 +59,21 @@ ngOnInit(): void {
   //     );
 
   //   });
-}
 
-addToCart(){
+   this._cart.getCartCount().subscribe(count=>{
+      this.cartCount=count
+   })
 
-}
+
+
 
 
 
   }
+  addToCart(){
 
+}
 
+}
 
 

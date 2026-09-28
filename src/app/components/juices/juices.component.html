@@ -1,0 +1,58 @@
+
+
+<div class="juice-section">
+
+  <div class="section-header">
+    <h2>Fresh Juices</h2>
+    <p>Choose your favorite fresh and delicious juice</p>
+  </div>
+
+  <div class="juice-grid">
+
+    <div class="juice-card" *ngFor="let juice of juices">
+
+      <!-- Image -->
+      <div class="juice-image">
+        <img
+          [src]="juice.image"
+          [alt]="juice.name"
+        />
+      </div>
+
+      <!-- Content -->
+      <div class="juice-content">
+
+        <h3>{{ juice.name }}</h3>
+
+        <p class="juice-information">
+          {{ juice.information }}
+        </p>
+
+        <div class="juice-bottom">
+
+          <span class="quantity">
+            {{ juice.quantity }}
+          </span>
+
+          <span class="price">
+            ₹{{ juice.price }}
+          </span>
+
+        </div>
+
+        <!-- Button -->
+        <button
+          type="button"
+          class="add-btn"
+          
+        >
+          Add to Cart
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

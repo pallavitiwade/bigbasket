@@ -1,0 +1,72 @@
+
+<div class="fruit-juice-container">
+
+  <div
+    class="fruit-juice-card"
+    *ngFor="let item of fruitsJuices"
+  >
+
+    <!-- Fruit Image -->
+    <div class="image-section fruit-section">
+      <img
+        [src]="item.fruitImage"
+        [alt]="item.fruitName"
+      />
+      </div>
+
+    <!-- Main Information -->
+    <div class="information-section">
+
+      <div class="title-row">
+        <h2>{{ item.fruitName }}</h2>
+
+        <span class="category">
+          {{ item.category }}
+        </span>
+      </div>
+
+      <p class="description">
+        {{ item.description }}
+      </p>
+
+      <div class="details">
+
+        <div class="detail-item">
+          <span class="label">Juice</span>
+          <strong>{{ item.juiceName }}</strong>
+        </div>
+
+        <div class="detail-item">
+          <span class="label">Quantity</span>
+          <strong>{{ item.quantity }}</strong>
+        </div>
+
+        <div class="detail-item">
+          <span class="label">Price</span>
+          <strong class="price">
+            ₹{{ item.totalPrice }}
+          </strong>
+        </div>
+
+      </div>
+
+      <button class="add-btn">
+        Add to Cart
+      </button>
+
+    </div>
+
+
+    <!-- Juice Image -->
+    <div class="image-section juice-section">
+      <img
+        [src]="item.juiceImage"
+        [alt]="item.juiceName"
+      />
+
+     
+    </div>
+
+  </div>
+
+</div>

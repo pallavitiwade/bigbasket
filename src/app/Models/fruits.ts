@@ -7,3 +7,16 @@ export interface Ifruit{
     kg: number;
     badge?:string;
 }
+
+
+export interface IFreshFruit{
+    id: number;
+    name: string;
+    description: string;
+    price: number;
+    quantity: string;
+    color: string;
+    category: string;
+    origin: string;
+    image:string;
+}

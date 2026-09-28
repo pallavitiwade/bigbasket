@@ -1,0 +1,46 @@
+<div class="fruit-container">
+
+  <div class="fruit-row" *ngFor="let fruit of fruitsBox">
+
+    <!-- Image -->
+    <div class="fruit-image">
+      <img
+        [src]="fruit.img"
+        [alt]="fruit.name">
+    </div>
+
+    <!-- Information -->
+    <div class="fruit-info">
+
+      <h3>{{ fruit.name }}</h3>
+
+      <p class="information">
+        {{ fruit.information }}
+      </p>
+
+      <div class="fruit-details">
+
+        <span>
+          <strong>ID:</strong>
+          {{ fruit.id }}
+        </span>
+
+        <span>
+          <strong>Quantity:</strong>
+          {{ fruit.quantity }}
+        </span>
+
+        <span>
+          <strong>Price:</strong>
+          ₹{{ fruit.price }}
+        </span>
+
+
+      </div>
+
+    </div>
+        <button class="add-btn text-center" routerLink="/cart" >Add to Cart</button>
+  </div>
+
+
+</div>

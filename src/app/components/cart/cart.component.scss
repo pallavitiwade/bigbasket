@@ -1,0 +1,440 @@
+
+$green: #3d7d20;
+$dark-green: #17451d;
+$light-green: #eef6e8;
+$cream: #f8f8f0;
+$text: #202820;
+$border: #dfe5d9;
+
+.fruit-page {
+  min-height: 100vh;
+  background: #f7f8fa;
+  padding-bottom: 40px;
+}
+
+/* Page Header */
+
+.page-header {
+  text-align: center;
+  padding: 40px 15px 30px;
+
+  h2 {
+    margin: 0;
+    font-size: 32px;
+    font-weight: 700;
+    color: #333;
+  }
+
+  p {
+    margin-top: 8px;
+    color:$green;
+    font-size: 16px;
+  }
+}
+
+/* Fruit Card */
+
+.fruit-card {
+  height: 100%;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #eee;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+  }
+}
+
+/* Image */
+
+.fruit-image {
+  width: 100%;
+  height: 190px;
+  overflow: hidden;
+  background: #f1f1f1;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+  }
+
+  &:hover {
+    img {
+      transform: scale(1.05);
+    }
+  }
+}
+
+/* Content */
+
+.fruit-content {
+  padding: 18px;
+}
+
+/* Name + Category */
+
+.fruit-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+
+  h3 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+  }
+}
+
+.category {
+  padding: 4px 8px;
+  border-radius: 15px;
+  background: #e8f5e9;
+  color: #2e7d32;
+  font-size: 11px;
+  white-space: nowrap;
+}
+
+/* Description */
+
+.description {
+  min-height: 45px;
+  margin: 12px 0;
+  color: #777;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Fruit Information */
+
+.fruit-info {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  padding: 12px 0;
+  margin-bottom: 15px;
+
+  div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  span {
+    font-size: 13px;
+    color: #555;
+  }
+
+  .label {
+    font-size: 11px;
+    color: #999;
+    margin-bottom: 3px;
+    text-transform: uppercase;
+  }
+}
+
+/* Price + Quantity */
+
+.fruit-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.price {
+  font-size: 22px;
+  font-weight: 700;
+  color: #2e7d32;
+}
+
+.quantity {
+  padding: 5px 9px;
+  background: #f5f5f5;
+  border-radius: 5px;
+  font-size: 13px;
+  color: #555;
+}
+
+/* Button */
+
+button {
+  border-radius: 6px;
+  font-weight: 500;
+  background: $green;
+  color: $light-green;
+}
+
+/* Responsive */
+
+@media (max-width: 767px) {
+  .page-header {
+    padding: 25px 15px;
+
+    h2 {
+      font-size: 26px;
+    }
+  }
+
+  .fruit-image {
+    height: 170px;
+  }
+}
+
+@media (max-width: 575px) {
+  .fruit-card {
+    margin-bottom: 5px;
+  }
+
+  .fruit-image {
+    height: 200px;
+  }
+}
+
+
+.fruit-container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+.fruit-row {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+
+  padding: 20px;
+  margin-bottom: 20px;
+
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+
+  box-sizing: border-box;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+
+  transition: 0.3s ease;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  }
+}
+
+/* =========================
+   IMAGE
+========================= */
+
+.fruit-image {
+  width: 180px;
+  height: 140px;
+  flex-shrink: 0;
+
+  img {
+    width: 100%;
+    height: 100%;
+    display: block;
+
+    object-fit: cover;
+    border-radius: 10px;
+  }
+}
+
+/* =========================
+   INFORMATION
+========================= */
+
+.fruit-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.fruit-info h3 {
+  margin: 0 0 10px;
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+}
+
+.information {
+  margin: 0 0 15px;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #666;
+}
+
+.fruit-details {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  flex-wrap: wrap;
+
+  span {
+    font-size: 15px;
+    color: #444;
+  }
+
+  strong {
+    color: #222;
+  }
+  
+}
+.add-btn{
+  border: none;
+  outline: none;
+
+  padding: 10px 22px;
+
+  border-radius: 8px;
+
+  background:$green;
+  color: #ffffff;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+  
+
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 768px) {
+
+  .fruit-container {
+    width: 100%;
+    padding: 0 12px;
+  }
+
+  .fruit-row {
+    gap: 18px;
+    padding: 15px;
+  }
+
+  .fruit-image {
+    width: 140px;
+    height: 120px;
+  }
+
+  .fruit-info h3 {
+    font-size: 21px;
+  }
+
+  .information {
+    font-size: 15px;
+  }
+
+  .fruit-details {
+    gap: 12px;
+  }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 576px) {
+
+  .fruit-container {
+    width: 100%;
+    padding: 0 10px;
+    margin-top: 20px;
+  }
+
+  .fruit-row {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    gap: 15px;
+    padding: 15px;
+  }
+
+  /* Image becomes full width */
+
+  .fruit-image {
+    width: 100%;
+    height: 200px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  /* Information */
+
+  .fruit-info {
+    width: 100%;
+  }
+
+  .fruit-info h3 {
+    font-size: 21px;
+    margin-bottom: 8px;
+  }
+
+  .information {
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+
+  /* Details become vertical */
+
+  .fruit-details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 7px;
+
+    span {
+      font-size: 14px;
+    }
+  }
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 400px) {
+
+  .fruit-row {
+    padding: 12px;
+  }
+
+  .fruit-image {
+    height: 170px;
+  }
+
+  .fruit-info h3 {
+    font-size: 19px;
+  }
+
+  .information {
+    font-size: 13px;
+  }
+
+  .fruit-details span {
+    font-size: 13px;
+  }
+}
+
+
